@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 
 Measurement.define(:km) do |unit|
   unit.alias :kilometer, :kilometers
@@ -64,6 +64,8 @@ Measurement.define(:cm) do |unit|
   unit.convert_to(:dm) { |value| value / 10.0 }
   unit.convert_to(:mm) { |value| value * 10.0 }
   unit.convert_to(:µm) { |value| value * 100.0 }
+  unit.convert_to(:in) { |value| value * 0.393701 }
+
 end
 
 Measurement.define(:mm) do |unit|
